@@ -2,37 +2,44 @@
 # Supervised Learning
 ## Project: Finding Donors for CharityML
 
-### Install
-
-This project requires **Python 3.x** and the following Python libraries installed:
-
-- [NumPy](http://www.numpy.org/)
-- [Pandas](http://pandas.pydata.org)
-- [matplotlib](http://matplotlib.org/)
-- [scikit-learn](http://scikit-learn.org/stable/)
-
-You will also need to have software installed to run and execute an [iPython Notebook](http://ipython.org/notebook.html)
-
-We recommend students install [Anaconda](https://www.continuum.io/downloads), a pre-packaged Python distribution that contains all of the necessary libraries and software for this project. 
+## Introduction
+(as provided by Udacity)</br>
+CharityML is a fictitious charity organization located in the heart of Silicon Valley that was established to provide
+financial support for people eager to learn machine learning. After nearly 32,000 letters were sent to people in the 
+community, CharityML determined that every donation they received came from someone that was making more than $50,000 
+annually. To expand their potential donor base, CharityML has decided to send letters to residents of California, but to only 
+those most likely to donate to the charity. With nearly 15 million working Californians, CharityML has brought you on board to
+help build an algorithm to best identify potential donors and reduce overhead cost of sending mail. Your goal will be evaluate
+and optimize several different supervised learners to determine which algorithm will provide the highest donation yield while
+also reducing the total number of letters being sent.
 
 ### Code
 
-Template code is provided in the `finding_donors.ipynb` notebook file. You will also be required to use the included `visuals.py` Python file and the `census.csv` dataset file to complete your work. While some code has already been implemented to get you started, you will need to implement additional functionality when requested to successfully complete the project. Note that the code included in `visuals.py` is meant to be used out-of-the-box and not intended for students to manipulate. If you are interested in how the visualizations are created in the notebook, please feel free to explore this Python file.
+Code is provided in the `finding_donors.ipynb` notebook file.</br>
+Data visualization code is provided in the `visuals.py` file.</br>
+Data is included in the `census.csv` file.</br>
 
-### Run
-
-In a terminal or command window, navigate to the top-level project directory `finding_donors/` (that contains this README) and run one of the following commands:
-
-```bash
-ipython notebook finding_donors.ipynb
-```  
-or
-```bash
-jupyter notebook finding_donors.ipynb
-```
-
-This will open the iPython Notebook software and project file in your browser.
-
+The Project was approached in the following steps:</br>
+Each step has been discussed in detail in the `finding_donors.ipynb` jupyter notebook.</br>
+- Exploring the Data (_Basic_ Exploratory Data Analyis)
+- Preparing the Data 
+  - Transforming Skewed Continuous Features (Log transformation)
+  - Normalizing Numerical Features (MinMaxScaler)
+  - Shuffle and Split Data (train-test split)
+- Evaluating Model Performance
+  - Set a naive predictor performance benchmark
+  - Explained Supervised Learning model with advantages, disadvantages and industry applications .
+  - Created a Training and Predicting Pipeline
+  - Implemented initial model performance
+- Improving Results
+  - Chose the Best Model with reasoning
+  - Described the Model in Layman's Terms
+  - Model Tuning by Hyper-parameter Optimization
+  - Evaluated Final Model
+- Feature Importance
+  - Observed feature relevance
+  - Extracted important features
+  - Importance of Feature Selection and its effects on the model
 ### Data
 
 The modified census dataset consists of approximately 32,000 data points, with each datapoint having 13 features. This dataset is a modified version of the dataset published in the paper *"Scaling Up the Accuracy of Naive-Bayes Classifiers: a Decision-Tree Hybrid",* by Ron Kohavi. You may find this paper [online](https://www.aaai.org/Papers/KDD/1996/KDD96-033.pdf), with the original dataset hosted on [UCI](https://archive.ics.uci.edu/ml/datasets/Census+Income).
